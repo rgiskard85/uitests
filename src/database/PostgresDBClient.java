@@ -26,7 +26,7 @@ public class PostgresDBClient {
     // insert new record in table researcher
     public void insResearcher(String nameGr, String surNameGr, String name, String surName, String email) {
         String query = "INSERT INTO public.researcher (name_gr, surname_gr, name, surname, email) ";
-        query = query + "VALUES ('" + nameGr + "','" + surNameGr + "','" + name + "','" + surNameGr + "','" + email + "')";
+        query = query + "VALUES ('" + nameGr + "','" + surNameGr + "','" + name + "','" + surName + "','" + email + "')";
         try (                
                 Connection connection = DriverManager.getConnection(dbUrl, dbUser, dbPass);
                 Statement statement = connection.createStatement();
